@@ -1,13 +1,14 @@
 export class Hero{
+    index:number;
     name:string;
-    picture:string;
     secret_identity:string;
-    super_power:string;
-
-    constructor(name:string,picture:string,secret_identity:string,super_power:string){
-        this.name=name;
-        this.picture=picture;
+    description:string;
+    image:string;
+    constructor(index:number,name:string,secret_identity:string,description:string,image:string){
+        this.index = index;
+        this.name = name;
         this.secret_identity = secret_identity;
-        this.super_power = super_power;
+        this.description = description;
+        this.image = image;
     }
 }

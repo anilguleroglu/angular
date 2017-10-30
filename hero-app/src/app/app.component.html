@@ -1,15 +1,43 @@
+<!-- <h2>Uygulama dediki : {{title}}</h2>
+
+<h3 >Uygulama dediki : <span [innerText]='title'></span></h3> -->
+
+<!-- 
+<p>Super Hero Name : {{superhero.name}}</p>
+<p>Super Hero Overview : {{superhero.overview}}</p>
+
+<button type="button" (click)='onAlert()'>Uyarı Ver</button> -->
 <div class="container">
-  <div class="row">
-    <div class="col-sm-6">
-        <div class="row" *ngFor="let hero of heroes">
-            <div class="col-sm-12">
-                <app-hero-box [hero]='hero' (onHeroSelect)='onSelect($event)'></app-hero-box>
-            </div>
-            <hr>
-          </div>          
+    <div class="row">
+        <div class="col-sm-4 col-lg-4 col-md-12">
+                <div class="form-group">
+                        <label>Kahramanın Adı</label>
+                        <input class="form-control" type="text" [(ngModel)]='hero.name'>
+                </div>
+                <div class="form-group">
+                        <label>Gizli Kimliği</label>
+                        <input class="form-control" type="text" [(ngModel)]='hero.secret_identity'>
+                </div>
+                <div class="form-group">
+                        <label>Fotoğraf Url</label>
+                        <input class="form-control" type="text" [(ngModel)]='hero.image'>
+                </div>
+                <div class="form-group">
+                        <label>Açıklama</label>
+                        <textarea class="form-control" [(ngModel)]='hero.description'></textarea>
+                </div>
+                    <button class="btn btn-success" (click)='onSave()'>Kaydet</button>
+        </div>
+        <div class="col-sm-8 col-lg-8 col-md-12">
+                <div *ngIf='heroes.length>0'>
+                        <h3>Kahramanlar</h3>
+                        <app-hero-box *ngFor='let h of heroes' 
+                        [hero]='h'
+                        (heroSelect)='onHeroSelect($event)'
+                        (heroDelete)='onHeroDelete($event)'>
+                    </app-hero-box>
+
+                    </div>
+        </div>
     </div>
-    <div class="col-sm-6" *ngIf="selectedHero!==undefined">
-      <app-hero-detail [hero]='selectedHero'></app-hero-detail>
-    </div>
-  </div>
 </div>

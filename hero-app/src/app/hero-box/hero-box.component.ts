@@ -1,5 +1,5 @@
-import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
-import { Hero } from "../Hero";
+import { Component, OnInit, Input, EventEmitter, Output } from '@angular/core';
+import { Hero } from "../hero";
 
 @Component({
   selector: 'app-hero-box',
@@ -9,15 +9,20 @@ import { Hero } from "../Hero";
 export class HeroBoxComponent implements OnInit {
 
   @Input() hero:Hero;
-  @Output() onHeroSelect = new EventEmitter<Hero>();
-
+  @Output() heroSelect=new EventEmitter<Hero>();
+  @Output() heroDelete=new EventEmitter<Hero>();
   constructor() { }
 
   ngOnInit() {
+    // this.hero = new Hero('Unknown','','','');
   }
 
   onSelect(){
-    this.onHeroSelect.emit(this.hero);
+    this.heroSelect.emit(this.hero);
+  }
+
+  onDelete(){
+    this.heroDelete.emit(this.hero);
   }
 
 }
