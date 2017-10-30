@@ -1,0 +1,38 @@
+[
+{
+"_id": 1234,
+"picture": "http://www.eonline.com/resize/200/200//eol_images/Entire_Site/201095/300.superman.lc.100510.jpg",
+"name": "Superman",
+"secret_identity": "Clark Kent",
+"superpower": "Being Super",
+"likes": 4,
+"sidekick": null
+},
+{
+"_id": 1235,
+"picture": "http://www5.pcmag.com/media/images/420382-419409-batman-arkham-knight-credit-rocksteady-studios-gameinformer.jpg?thumb=y",
+"name": "Batman",
+"secret_identity": "Bruce Wayne",
+"superpower": "Gadgetry and Being a Badass",
+"likes": 2,
+"sidekick": "Robin"
+},
+{
+"_id": 1236,
+"picture": "http://www.gannett-cdn.com/-mm-/4cf088e495b84b01d6fe9784ea5c16f3e7f2ffc4/c=33-0-368-335&r=x203&c=200x200/local/-/media/WXIA/WXIA/2014/11/07/635509926335310058-ant-man1107b.jpg",
+"name": "Ant-Man",
+"secret_identity": "Scott Lang",
+"superpower": "Strong Man in a Little Suit",
+"likes": 13,
+"sidekick": null
+},
+{
+"_id": 1237,
+"picture": "http://cdn.images.express.co.uk/img/dynamic/20/590x/secondary/The-Tick-496029.jpg",
+"name": "The Tick",
+"secret_identity": null,
+"superpower": "Dense",
+"likes": 7,
+"sidekick": "Arthur"
+}
+]
