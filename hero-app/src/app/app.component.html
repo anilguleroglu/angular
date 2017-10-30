@@ -1,0 +1,15 @@
+<div class="container">
+  <div class="row">
+    <div class="col-sm-6">
+        <div class="row" *ngFor="let hero of heroes">
+            <div class="col-sm-12">
+                <app-hero-box [hero]='hero' (onHeroSelect)='onSelect($event)'></app-hero-box>
+            </div>
+            <hr>
+          </div>          
+    </div>
+    <div class="col-sm-6" *ngIf="selectedHero!==undefined">
+      <app-hero-detail [hero]='selectedHero'></app-hero-detail>
+    </div>
+  </div>
+</div>
