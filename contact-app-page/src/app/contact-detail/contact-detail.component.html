@@ -1,0 +1,16 @@
+<div class="panel panel-default">
+  <div class="panel-header">
+    <h4 class="panel-heading">{{contact.first_name}} {{contact.last_name}}</h4>
+  </div>
+  <div class="panel-body">
+    <div class="col-sm-4">
+      <img src="{{contact.avatar==''?'https://cdn1.iconfinder.com/data/icons/user-pictures/100/unknown-512.png':contact.avatar}}" width="200" height="200" alt="">
+    </div>
+    <div class="col-sm-8">
+    <p>Telefon : {{contact.phone}}</p>
+    <p>Email : {{contact.email}}</p>
+    <p>Şirket : {{contact.company}}</p>
+    <p>Description : {{contact.description}}</p>
+    </div>
+  </div>
+</div>
