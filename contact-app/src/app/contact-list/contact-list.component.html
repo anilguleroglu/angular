@@ -1,0 +1,14 @@
+<h2>Kişiler Listem</h2>
+<div class="media" *ngFor='let contact of contact_list'>
+<div class="media-left">
+  <img src="{{contact.getAvatar()}}" width="50" height="50" class="image" alt="">
+</div>
+<div class="media-body">
+  <h3 class="media-heading">{{contact.fullname()}}</h3>
+  <p>{{contact.email}}</p>
+  <button class="btn btn-primary" (click)='onEdit(contact)'><i class="glyphicon glyphicon-pencil"></i> Düzenle</button>
+
+<button class="btn btn-danger" (click)='onDelete(contact)'><i class="glyphicon glyphicon-remove"></i> Sil</button>
+
+</div>
+</div>

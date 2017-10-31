@@ -1,0 +1,77 @@
+
+<form ngForm (submit)='onSubmit(f)' #f="ngForm">
+<div class="form-group">
+  <label for="first_name">Ad</label>
+  <input 
+  type="text" 
+  name="first_name" 
+  class="form-control"
+  ngModel
+  required
+  #firstname='ngModel'>
+  <span class="help-block" *ngIf='!firstname.valid && firstname.touched'>Ad alanı zorunludur.</span>
+</div>
+<div class="form-group">
+  <label for="last_name">Soyad</label>
+  <input 
+  type="text" 
+  name="last_name" 
+  class="form-control"
+  ngModel
+  required
+  #lastname='ngModel'>
+  <span class="help-block" *ngIf='!lastname.valid && lastname.touched'>Soyad alanı zorunludur.</span>
+</div>
+<div class="form-group">
+  <label for="phone">Telefon</label>
+  <input 
+  type="text" 
+  name="phone" 
+  class="form-control"
+  ngModel
+  required
+  #phone='ngModel'>
+  <span class="help-block" *ngIf='!phone.valid && phone.touched'>Telefon alanı zorunludur.</span>
+</div>
+<div class="form-group">
+  <label for="email">Email</label>
+  <input 
+  type="text" 
+  name="email" 
+  class="form-control"
+  ngModel
+  #email='ngModel'
+  required
+  email>
+  <span class="help-block" *ngIf='!email.valid && email.touched'>
+    <p *ngIf='email.errors["required"]'>Email alanı zorunludur.</p>
+    <p *ngIf='email.errors["email"]'>Lütfen geçerli bir email giriniz.</p>
+  </span>
+</div>
+<div class="form-group">
+  <label for="company">Şirket</label>
+  <input 
+  type="text" 
+  name="company" 
+  class="form-control"
+  ngModel>
+</div>
+<div class="form-group">
+  <label for="avatar">Avatar Url</label>
+  <input 
+  type="text" 
+  name="avatar" 
+  class="form-control"
+  ngModel>
+</div>
+<div class="form-group">
+  <label for="description">Açıklama</label>
+  <textarea 
+  class="form-control" 
+  name="description"
+  ngModel></textarea>
+</div>
+<button [disabled]='!f.valid' type="submit" class="btn btn-primary">Kaydet</button>
+<button class="btn btn-default" (click)='onReset()'>Sıfırla</button>
+
+</form>

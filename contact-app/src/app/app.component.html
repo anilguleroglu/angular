@@ -1,0 +1,10 @@
+<div class="container">
+  <div class="row">
+    <div class="col-sm-4">
+      <app-contact-form #contactForm></app-contact-form>
+    </div>
+    <div class="col-sm-8">
+      <app-contact-list (edit)='onEdit($event)' (delete)='onDelete($event)'></app-contact-list>
+    </div>
+  </div>
+</div>
