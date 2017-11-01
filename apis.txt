@@ -1,0 +1,12 @@
+http://openweathermap.org
+
+http://api.openweathermap.org/data/2.5/weather?q=istanbul&appid=b551e49dc3c2457e99d3c767ce10f829&units=metric
+
+
+https://websygen.github.io/owfont/#
+
+https://websygen.github.io/owfont/css/owfont-regular.css
+
+
+hurriyet-js
+https://github.com/aguleroglu/hurriyet-js-api
