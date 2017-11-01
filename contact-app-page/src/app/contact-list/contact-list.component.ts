@@ -19,11 +19,6 @@ export class ContactListComponent implements OnInit {
   ngOnInit() {
     this.contact_list = this.contactService.contact_list;
   }
-
-  onEdit(c:Contact){
-    this.router.navigate(['edit',c.id]);
-  }
-
   onDetail(c:Contact){
     this.router.navigate(['detail',c.id]);
   }

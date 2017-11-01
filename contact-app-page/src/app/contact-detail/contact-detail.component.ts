@@ -23,4 +23,16 @@ export class ContactDetailComponent implements OnInit {
     })
   }
 
+  onEdit(){
+    this.router.navigate(['edit',this.contact.id]);
+  }
+  
+  onDelete(){
+    var c = confirm("Silmek istediğinize emin misiniz?");
+
+    if(c){
+      this.contactService.delete(this.contact);
+      this.router.navigate(['list']);
+    }
+  }
 }

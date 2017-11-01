@@ -7,10 +7,17 @@
       <img src="{{contact.avatar==''?'https://cdn1.iconfinder.com/data/icons/user-pictures/100/unknown-512.png':contact.avatar}}" width="200" height="200" alt="">
     </div>
     <div class="col-sm-8">
-    <p>Telefon : {{contact.phone}}</p>
-    <p>Email : {{contact.email}}</p>
-    <p>Şirket : {{contact.company}}</p>
-    <p>Description : {{contact.description}}</p>
+      <div class="row">
+      <p>Telefon : {{contact.phone}}</p>
+      <p>Email : {{contact.email}}</p>
+      <p>Şirket : {{contact.company}}</p>
+      <p>Description : {{contact.description}}</p>
+    </div>
+    <div class="row">
+      <button class="btn btn-primary" (click)='onEdit()'><i class="glyphicon glyphicon-pencil"></i> Düzenle</button>
+      
+      <button class="btn btn-danger" (click)='onDelete()'><i class="glyphicon glyphicon-remove"></i> Sil</button>
+  </div>
     </div>
   </div>
 </div>

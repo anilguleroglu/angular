@@ -14,10 +14,20 @@
         <li> <a routerLink="/list">Kişilerim</a> </li> 
         <li> <a routerLink="/new">Yeni Ekle</a> </li> 
          </ul> 
+         <ul class="nav navbar-nav navbar-right"> 
+           <div *ngIf='isAuthenticated'>
+            <li> <a routerLink='#'>Hoşgeldiniz</a> </li> 
+            <li> <a routerLink='/logout'>Çıkış Yap</a> </li> 
+           </div>
+           <div *ngIf='!isAuthenticated'>
+            <li> <a routerLink='/login'>Giriş Yap</a> </li> 
+           </div>
+             </ul> 
         </nav> 
       </div> 
     </header>
 
 <div class="container">
+  
   <router-outlet></router-outlet>
 </div>
