@@ -1,0 +1,56 @@
+<div *ngIf='!movie'>
+  Yükleniyor...
+</div>
+
+<div class="panel panel-default" *ngIf='movie'>
+  <div class="panel-header">
+    <h2 class="panel-heading">{{movie.title}}</h2>
+  </div>
+  <div class="panel-body">
+    <div class="row">
+      <div class="col-sm-4">
+        <img src="{{movie.poster_path}}" class="image" alt="">
+      </div>
+      <div class="col-sm-8">
+        <div class="row">
+          <p>{{movie.overview}}</p>
+          <ul>
+            <li *ngFor='let g of movie.genres'>
+              {{g}}
+            </li>
+          </ul>
+        </div>
+        <div class="row" *ngIf='videos'>
+          <h4>Videolar</h4>
+          <div class="col-sm-6" *ngFor='let video of videos'>
+            <p>{{video.name}}</p>
+            <iframe id="ytplayer" type="text/html" width="300" height="200" [src]="videoUrl(video.url)" frameborder="0"></iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="panel panel-default" *ngIf='currentUser'>
+  <div class="panel-header">
+    <h2 class="panel-heading">Yorumlar</h2>
+  </div>
+  <div class="panel-body">
+    <div class="row">
+      <div class="media" *ngFor='let comment of comments'>
+        <div class="media-body">
+          <h4 class="media-heading">{{comment.username}}</h4>
+          <p>{{comment.text}}</p>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-ms-12">
+      <textarea class="form-control" [(ngModel)]='text'></textarea>
+      <button class="btn btn-primary" (click)='sendComment()'>Gönder</button>
+      <p *ngIf='error'>{{error}}</p>
+    </div>
+    </div>
+  </div>
+</div>

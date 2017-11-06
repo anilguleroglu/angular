@@ -1,0 +1,19 @@
+<div class="row">
+  <div (click)='detail(movie)' class="col-sm-4 col-md-3" *ngFor='let movie of movies'>
+    <div class="thumbnail">
+      <img src="{{movie.poster_path}}" alt="">
+      <div class="caption">
+        <p><b>{{movie.title}}</b></p>
+        <p>{{movie.short_overview}}</p>
+        <p>
+          <span>
+            <b>Puan : </b> {{movie.vote}}
+          </span>
+          <span class="pull-right">
+            {{movie.release_date}}
+          </span>
+        </p>
+      </div>
+    </div>
+  </div>
+</div>

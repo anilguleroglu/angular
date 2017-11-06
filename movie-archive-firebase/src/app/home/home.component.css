@@ -1,0 +1,8 @@
+
+.thumbnail{
+    cursor: pointer;
+}
+
+.thumbnail:hover{
+    background-color: #ccc;
+}
